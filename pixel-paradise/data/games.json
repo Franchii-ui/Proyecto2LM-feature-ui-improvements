@@ -1,0 +1,38 @@
+[
+    {
+      "id": "echoes-ancients",
+      "title": "Echoes of the Ancients",
+      "description": "Embark on a journey through forgotten lands. Uncover the secrets of the past.",
+      "genre": "adventure",
+      "releaseStatus": "released",
+      "image": "https://i.blogs.es/c87316/star-trek-orden/840_560.jpeg",
+      "details": "More extensive details about Echoes of the Ancients..."
+    },
+    {
+      "id": "tactical-titans",
+      "title": "Tactical Titans",
+      "description": "Command your forces in epic battles. Outsmart your opponents with cunning tactics.",
+      "genre": "strategy",
+      "releaseStatus": "released",
+      "image": "https://i.blogs.es/c87316/star-trek-orden/840_560.jpeg",
+      "details": "More extensive details about Tactical Titans..."
+    },
+    {
+      "id": "mind-maze",
+      "title": "Mind Maze",
+      "description": "Challenge your intellect with intricate puzzles. Solve the unsolvable.",
+      "genre": "puzzle",
+      "releaseStatus": "released",
+      "image": "https://i.blogs.es/c87316/star-trek-orden/840_560.jpeg",
+      "details": "More extensive details about Mind Maze..."
+    },
+    {
+      "id": "stellar-voyage",
+      "title": "Stellar Voyage",
+      "description": "Explore distant galaxies and build your space empire.",
+      "genre": "simulation",
+      "releaseStatus": "coming_soon",
+      "image": "https://i.blogs.es/c87316/star-trek-orden/840_560.jpeg",
+      "details": "More extensive details about Stellar Voyage..."
+    }
+  ]

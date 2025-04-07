@@ -1,0 +1,17 @@
+visual:
+  theme: light               # Opciones: light, dark
+  showImages: true           # Mostrar imágenes en las tarjetas
+  animations: fade           # Tipo de animaciones: fade, slide, none
+
+pagination:
+  itemsPerPage: 6            # Número máximo de elementos por página
+
+language: es                 # Idioma de la interfaz: es, en, etc.
+
+releaseFilters:              # Filtros para el estado de lanzamiento
+  showReleased: true         # Mostrar juegos lanzados
+  showComingSoon: true       # Mostrar juegos próximos
+
+accessibility:
+  highContrast: false        # Modo de alto contraste
+  fontSize: medium           # Tamaño de fuente: small, medium, large

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Paradise - Game Showcase</title>
+    <!-- Carga de estilos de Bootstrap y estilos personalizados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark-mode.css"> </head>
+<body>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pixel Paradise</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Enlaces de navegación -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-releases">New Releases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#coming-soon">Coming Soon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#settings">Settings</a>
+                    </li>
+                </ul>
+                <!-- Filtro por género -->
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownFiltros"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter by Genre
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownFiltros">
+                            <li><button class="dropdown-item filtro-boton" data-filter="todos">Show All</button></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="adventure">Adventure</button></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="strategy">Strategy</button></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="puzzle">Puzzle</button></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="simulation">Simulation</button></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="racing">Racing</button></li>
+                            <li><button class="dropdown-item filtro-boton" data-filter="sports">Sports</button></li>
+                        </ul>
+                    </div>
+                    <!-- Dark Mode Toggle -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+                        <label class="form-check-label text-light" for="darkModeToggle">Dark Mode</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Carrusel de juegos destacados -->
+        <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Primera diapositiva -->
+                <div class="carousel-item active">
+                    <img src="placeholder-carousel-1.jpg" class="d-block w-100 carousel-image" alt="Game 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Echoes of the Ancients</h5>
+                        <p>Embark on a journey through forgotten lands. Uncover the secrets of the past.</p>
+                    </div>
+                </div>
+                <!-- Segunda diapositiva -->
+                <div class="carousel-item">
+                    <img src="placeholder-carousel-2.jpg" class="d-block w-100 carousel-image" alt="Game 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Tactical Titans</h5>
+                        <p>Command your forces in epic battles. Outsmart your opponents with cunning tactics.</p>
+                    </div>
+                </div>
+                <!-- Tercera diapositiva -->
+                <div class="carousel-item">
+                    <img src="placeholder-carousel-3.jpg" class="d-block w-100 carousel-image" alt="Game 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mind Maze</h5>
+                        <p>Challenge your intellect with intricate puzzles. Solve the unsolvable.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles del carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container mt-4">
+            <!-- Título de la sección -->
+            <h2 class="text-center mt-5 mb-4" id="sectionTitle">Explore Our Digital Worlds</h2>
+            <!-- Controles adicionales (filtros, etc.) -->
+            <div id="controls" class="mb-3 d-flex justify-content-between"></div>
+            <!-- Contenedor de tarjetas de juegos -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="gameGrid"></div>
+            <!-- Controles de paginación -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center mt-4" id="paginationControls"></ul>
+            </nav>
+            <!-- Vista de detalles (oculta por defecto) -->
+            <div id="detailView" class="mt-5" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>
