@@ -133,3 +133,95 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// This is the main.js file, responsible for loading and displaying the games.
+// It's currently commented out, so it won't affect the website.
+
+// import { load } from 'https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js'; // Import the js-yaml library for parsing YAML.
+
+// document.addEventListener('DOMContentLoaded', () => { // Wait for the HTML to be fully loaded.
+//     const gameGrid = document.getElementById('gameGrid'); // Get the element where the game cards will be displayed.
+
+//     // Function to fetch and parse YAML data.
+//     const fetchYamlData = async () => {
+//         try {
+//             const response = await fetch('data.yaml'); // Fetch the data.yaml file.
+//             const yamlText = await response.text(); // Get the text content of the YAML file.
+//             return load(yamlText); // Parse the YAML text into a JavaScript object.
+//         } catch (error) {
+//             console.error('Error fetching or parsing YAML:', error); // Log an error if something goes wrong.
+//             return null; // Return null if there's an error.
+//         }
+//     };
+
+//     // Function to fetch and parse JSON data.
+//     const fetchJsonData = async () => {
+//         try {
+//             const response = await fetch('data/games.json'); // Fetch the games.json file.
+//             return await response.json(); // Parse the JSON data into a JavaScript array of objects.
+//         } catch (error) {
+//             console.error('Error fetching or parsing JSON:', error); // Log an error if something goes wrong.
+//             return []; // Return an empty array if there's an error.
+//         }
+//     };
+
+//     // Function to create a game card.
+//     const createGameCard = (game) => {
+//         const card = document.createElement('div'); // Create a new div element.
+//         card.classList.add('col'); // Add the 'col' class for Bootstrap grid layout.
+//         card.innerHTML = ` // Set the HTML content of the card.
+//             <div class="card h-100">
+//                 <img src="${game.image}" class="card-img-top" alt="${game.title}">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${game.title}</h5>
+//                     <p class="card-text">${game.description}</p>
+//                     <p class="card-text"><small class="text-muted">Genre: ${game.genre}</small></p>
+//                 </div>
+//             </div>
+//         `;
+//         return card; // Return the created card element.
+//     };
+
+//     // Function to display games.
+//     const displayGames = async () => {
+//         const yamlData = await fetchYamlData(); // Fetch the YAML data.
+//         const allGames = await fetchJsonData(); // Fetch the JSON data.
+
+//         if (!yamlData) { // Check if the YAML data was loaded successfully.
+//             console.error('YAML data is missing or invalid.'); // Log an error if it wasn't.
+//             return; // Exit the function if there's no YAML data.
+//         }
+
+//         const maxGamesToDisplay = yamlData.display.maxGames || 6; // Get the maximum number of games to display from YAML, or default to 6.
+//         const gameIdsToDisplay = yamlData.display.gameIds || []; // Get the list of game IDs to display from YAML, or default to an empty array.
+
+//         const gamesToDisplay = allGames.filter(game => // Filter the games based on the IDs in YAML.
+//             gameIdsToDisplay.includes(game.id) // Keep only the games whose IDs are in the gameIdsToDisplay array.
+//         ).slice(0, maxGamesToDisplay); // Limit the number of games to display to maxGamesToDisplay.
+
+//         gamesToDisplay.forEach(game => { // Loop through the games to display.
+//             const card = createGameCard(game); // Create a card for each game.
+//             gameGrid.appendChild(card); // Add the card to the gameGrid element.
+//         });
+//     };
+
+//     // Initial display of games.
+//     displayGames(); // Call the displayGames function to start the process.
+// });
+
+// Explanation :
+// - This file is written in JavaScript, the language of the web.
+// - The '//' symbol indicates a single-line comment.
+// - '/*' and '*/' are used for multi-line comments.
+// - 'import' is used to bring in external libraries, like js-yaml.
+// - 'async' and 'await' are used for asynchronous operations (like fetching files).
+// - 'fetch' is used to get data from files or URLs.
+// - 'document.getElementById' is used to find elements in the HTML.
+// - 'createElement' is used to create new HTML elements.
+// - 'classList.add' is used to add CSS classes to elements.
+// - 'innerHTML' is used to set the HTML content of an element.
+// - 'filter' is used to create a new array with elements that meet a certain condition.
+// - 'slice' is used to get a portion of an array.
+// - 'forEach' is used to loop through an array.
+// - 'appendChild' is used to add an element to another element.
+// - If you want to use this file, you need to remove the '//' from the start of each line.

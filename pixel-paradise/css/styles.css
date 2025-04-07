@@ -95,8 +95,10 @@ body.dark-mode {
 /* Estilo para las imágenes del carrusel */
 .carousel-image {
     height: 400px; /* Ajusta según el diseño deseado */
+    width: 100%; /* Ancho completo */
     object-fit: cover; /* Mantiene la proporción y llena el área */
     filter: brightness(0.8); /* Oscurece ligeramente para resaltar el texto */
+    object-position: center; /* Centra la imagen */
 }
 
 /* === Animaciones === */
